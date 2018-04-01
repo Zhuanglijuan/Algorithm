@@ -3,16 +3,16 @@
  */
 public class UnionFind3 {
     private int[] parent;
-    private int[] sz;    //sz[i]表示以i为根的集合中元素个数
+    private int[] rank;    //rank[i]表示以i为根的集合所表示的树的层数
     private int count;
 
     public UnionFind3(int count){
         parent = new int[count];
         this.count = count;
-        sz = new int[count];
+        rank = new int[count];
         for(int i = 0;i < count ; i ++){
             parent[i] = i;
-            sz[i] = 1;
+            rank[i] = 1;
         }
     }
 
@@ -43,15 +43,15 @@ public class UnionFind3 {
 
         // 根据两个元素所在树的元素个数不同判断合并方向
         // 将元素个数少的集合合并到元素个数多的集合上
-        if(sz[pRoot] < sz[qRoot]){
+        if(rank[pRoot] < rank[qRoot]){
             parent[pRoot] = qRoot;
-            sz[qRoot] += sz[qRoot];
-        }else{
+        }else if(rank[qRoot] < rank[pRoot]){
             parent[qRoot] = pRoot;
-            sz[pRoot] += sz[qRoot];
         }
-
-
+        else{
+            parent[pRoot] = qRoot;
+            rank[qRoot] += 1;
+        }
     }
 
 }
