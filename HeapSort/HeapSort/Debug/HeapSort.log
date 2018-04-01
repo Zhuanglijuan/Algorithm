@@ -1,0 +1,17 @@
+﻿  stdafx.cpp
+  HeapSort.cpp
+e:\documents\work\c++\heapsort\heapsort\sorttesthelper.h(20): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+e:\documents\work\c++\heapsort\heapsort\sorttesthelper.h(32): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+e:\documents\work\c++\heapsort\heapsort\quicksort.h(54): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+  e:\documents\work\c++\heapsort\heapsort\heapsort.cpp(73): note: 参见对正在编译的函数 模板 实例化“void quickSort<T>(T [],int)”的引用
+          with
+          [
+              T=int
+          ]
+e:\documents\work\c++\heapsort\heapsort\quicksort.h(98): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+  e:\documents\work\c++\heapsort\heapsort\heapsort.cpp(74): note: 参见对正在编译的函数 模板 实例化“void quickSort3Ways<T>(T [],int)”的引用
+          with
+          [
+              T=int
+          ]
+  HeapSort.vcxproj -> E:\Documents\work\C++\HeapSort\Debug\HeapSort.exe

@@ -1,0 +1,5 @@
+﻿  stdafx.cpp
+  IndexHeap.cpp
+c:\users\administrator\source\repos\indexheap\indexheap\sorttesthelper.h(21): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+c:\users\administrator\source\repos\indexheap\indexheap\sorttesthelper.h(36): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+  IndexHeap.vcxproj -> C:\Users\Administrator\source\repos\IndexHeap\Debug\IndexHeap.exe
