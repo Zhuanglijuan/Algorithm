@@ -9,17 +9,27 @@ public class Selection {
 
         Comparable v = arr[l];
 
-        int j = l; //arr[l + 1 ... j] > v ; arr[j + 1 ... r] < v
-        for(int i = l + 1; i <= r; i ++){
-            if(arr[i].compareTo(v) > 0){
-                j ++;
-                swap(arr,j,i);
+        int lt = l;     // arr[l+1...lt] > v
+        int gt = r + 1; // arr[gt...r] < v
+        int i = l+1;    // arr[lt+1...i) == v
+        while( i < gt ){
+            if( arr[i].compareTo(v) > 0 ){
+                swap( arr, i, lt+1);
+                i ++;
+                lt ++;
+            }
+            else if( arr[i].compareTo(v) < 0 ){
+                swap( arr, i, gt-1);
+                gt --;
+            }
+            else{ // arr[i] == v
+                i ++;
             }
         }
 
-        swap(arr,l,j);
+        swap( arr, l, lt );
 
-        return j;
+        return lt;
     }
 
     //求出nums[l ... r]范围里第k大的数
